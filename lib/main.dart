@@ -25,6 +25,11 @@ class DicePage extends StatefulWidget {
 class _DicePageState extends State<DicePage> {
   int leftDiceNum = 2, rightDiceNum = 1;
 
+  void randomiseDice() {
+    leftDiceNum = Random().nextInt(6) + 1;
+    rightDiceNum = Random().nextInt(6) + 1;
+  }
+
   @override
   Widget build(BuildContext context) {
     return Center(
@@ -53,10 +58,5 @@ class _DicePageState extends State<DicePage> {
         ],
       ),
     );
-  }
-
-  void randomiseDice() {
-    leftDiceNum = Random().nextInt(6) + 1;
-    rightDiceNum = Random().nextInt(6) + 1;
   }
 }
